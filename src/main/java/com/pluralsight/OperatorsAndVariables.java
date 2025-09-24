@@ -2,6 +2,35 @@ package com.pluralsight;
 
 public class OperatorsAndVariables {
     public static void main(String[] args) {
+        //Medium (use modulo, increments, mixed operators)
+        //Ammo Reloading A player has 53 bullets, and each magazine holds 7. 👉 Print how many full magazines they have and how many bullets are left.
+        int magazine;
+        int bullet = 53;
+        int remainBullet;
+
+        magazine = bullet /7;
+        remainBullet = bullet % magazine;
+
+        System.out.println("Magazine: " + magazine);
+        System.out.println("Remain bullet: " + remainBullet);
+
+//Level Up XP The player has 1180 XP. Each level requires 500 XP. 👉 Print the current level and leftover XP.
+
+        int playerXP = 1180;
+        int level;
+        int leftXP;
+
+        level = playerXP / 500;
+        leftXP = playerXP % 500;
+
+        System.out.println("Level: "+ level);
+        System.out.println("LeftXP: " + leftXP);
+
+
+
+
+
+
         //Puzzles (guess the output)
 // 1) Coin Pouch
         int a = 4, b = 6;

@@ -11,10 +11,10 @@ public class RecapExercise {
         //Original: 12.0
         //Doubled: 24.0
 
-        double original =12 ;
-        double doubled;
+        double original = 12 ;
+        double doubled = original * 2;
 
-        doubled = original * 2;
+
 
         System.out.println(original);
         System.out.println(doubled);
@@ -49,6 +49,60 @@ public class RecapExercise {
 
         System.out.println(randomNum);
         System.out.println(newNum);
+
+//Take a number of hours (e.g. 27) and calculate what hour that would be on a 24-hour clock. Use % 24.
+//
+//Example:
+//
+//27 hours later → 3 o’clock
+        int hours = 7;
+        int hrIn24Clock = hours % 24;
+
+        System.out.println("Hours: " + hours);
+        System.out.println("Hour in 24hr clock: " + hrIn24Clock);
+
+
+ //🔹 Bonus 2: Minutes to Hours and Minutes ⏳
+        //Take a number of minutes (e.g. 130) and figure out how many full hours and leftover minutes that is.
+        //
+        //Hours = minutes / 60
+        //Leftover = minutes % 60
+
+        int minutes =130;
+        int Hours = minutes / 60;
+        int leftover = minutes % 60;
+
+
+        System.out.println(minutes+" minutes = "+ Hours+ " hours and " + leftover + " minutes.");
+
+
+//📝 Exercise: Time Calculator (No if statements)
+//You are given a starting time and some extra minutes to add. Write a program that calculates the final time on a 24-hour clock.
+//
+//Step 1: Start
+
+        int nrHours = 3;
+        int nrMinutes = 23;
+        int minutesToAdd = 183;
+
+        int newHours;
+        int leftOverMin;
+        int newMinutes;
+
+ //Step 2: Find the new hours
+        newHours = nrHours + minutesToAdd / 60;
+//Step 3: Find the leftover minutes
+        leftOverMin = minutesToAdd % 60;
+
+        newMinutes = nrMinutes + leftOverMin;
+
+ //Step 4: Print the final time
+        //Finally, show the result as hours:minutes.
+        //
+        System.out.println("Final time: " + newHours + ":" + newMinutes);
+
+
+
 
 
 

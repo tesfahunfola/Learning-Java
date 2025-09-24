@@ -82,7 +82,7 @@ public class RecapExercise {
 //Step 1: Start
 
         int nrHours = 3;
-        int nrMinutes = 23;
+        int nrMinutes = 59;
         int minutesToAdd = 183;
 
         int newHours;
@@ -90,11 +90,11 @@ public class RecapExercise {
         int newMinutes;
 
  //Step 2: Find the new hours
-        newHours = nrHours + minutesToAdd / 60;
+        newHours = nrHours + (minutesToAdd + nrMinutes)/ 60;
 //Step 3: Find the leftover minutes
         leftOverMin = minutesToAdd % 60;
 
-        newMinutes = nrMinutes + leftOverMin;
+        newMinutes = (nrMinutes + leftOverMin)% 60;
 
  //Step 4: Print the final time
         //Finally, show the result as hours:minutes.

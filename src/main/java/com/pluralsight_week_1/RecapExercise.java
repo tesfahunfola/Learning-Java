@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight_week_1;
 
 public class RecapExercise {
     public static void main(String[] args) {

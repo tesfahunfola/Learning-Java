@@ -7,7 +7,12 @@ public class MethodExercise {
         printWelcome();
         displayPlayerName("Tes");
         showLevel(4);
-        String man = getPlayerTitle("TEsfahun");
+        String man = getPlayerTitle("'    ______________________ _________________________    ___ ___  ____ __________   \n" +
+                "'    \\__    ___/\\_   _____//   _____/\\_   _____/  _  \\  /   |   \\|    |   \\      \\  \n" +
+                "'      |    |    |    __)_ \\_____  \\  |    __)/  /_\\  \\/    ~    \\    |   /   |   \\ \n" +
+                "'      |    |    |        \\/        \\ |     \\/    |    \\    Y    /    |  /    |    \\\n" +
+                "'      |____|   /_______  /_______  / \\___  /\\____|__  /\\___|_  /|______/\\____|__  /\n" +
+                "'                       \\/        \\/      \\/         \\/       \\/                 \\/ ");
         System.out.println(man);
 
         Scanner scan = new Scanner(System.in);

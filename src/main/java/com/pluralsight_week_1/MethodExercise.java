@@ -5,14 +5,19 @@ import java.util.Scanner;
 public class MethodExercise {
     public static void main(String[] args) {
         printWelcome();
-        displayPlayerName("Tes");
-        showLevel(4);
-        String man = getPlayerTitle("'    ______________________ _________________________    ___ ___  ____ __________   \n" +
-                "'    \\__    ___/\\_   _____//   _____/\\_   _____/  _  \\  /   |   \\|    |   \\      \\  \n" +
-                "'      |    |    |    __)_ \\_____  \\  |    __)/  /_\\  \\/    ~    \\    |   /   |   \\ \n" +
-                "'      |    |    |        \\/        \\ |     \\/    |    \\    Y    /    |  /    |    \\\n" +
-                "'      |____|   /_______  /_______  / \\___  /\\____|__  /\\___|_  /|______/\\____|__  /\n" +
-                "'                       \\/        \\/      \\/         \\/       \\/                 \\/ ");
+        displayPlayerName("Chelsea");
+        showLevel(11);
+        String man = getPlayerTitle("'     .----------------.  .----------------.  .----------------.   .----------------.   .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------. \n" +
+                "'    | .--------------. || .--------------. || .--------------. | | .--------------. | | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |\n" +
+                "'    | |   _____      | || | _____  _____ | || | ____   ____  | | | | _____  _____ | | | |     ______   | || |  ____  ____  | || |  _________   | || |   _____      | || |    _______   | || |  _________   | || |      __      | |\n" +
+                "'    | |  |_   _|     | || ||_   _||_   _|| || ||_  _| |_  _| | | | ||_   _||_   _|| | | |   .' ___  |  | || | |_   ||   _| | || | |_   ___  |  | || |  |_   _|     | || |   /  ___  |  | || | |_   ___  |  | || |     /  \\     | |\n" +
+                "'    | |    | |       | || |  | |    | |  | || |  \\ \\   / /   | | | |  | |    | |  | | | |  / .'   \\_|  | || |   | |__| |   | || |   | |_  \\_|  | || |    | |       | || |  |  (__ \\_|  | || |   | |_  \\_|  | || |    / /\\ \\    | |\n" +
+                "'    | |    | |   _   | || |  | '    ' |  | || |   \\ \\ / /    | | | |  | '    ' |  | | | |  | |         | || |   |  __  |   | || |   |  _|  _   | || |    | |   _   | || |   '.___`-.   | || |   |  _|  _   | || |   / ____ \\   | |\n" +
+                "'    | |   _| |__/ |  | || |   \\ `--' /   | || |    \\ ' /     | | | |   \\ `--' /   | | | |  \\ `.___.'\\  | || |  _| |  | |_  | || |  _| |___/ |  | || |   _| |__/ |  | || |  |`\\____) |  | || |  _| |___/ |  | || | _/ /    \\ \\_ | |\n" +
+                "'    | |  |________|  | || |    `.__.'    | || |     \\_/      | | | |    `.__.'    | | | |   `._____.'  | || | |____||____| | || | |_________|  | || |  |________|  | || |  |_______.'  | || | |_________|  | || ||____|  |____|| |\n" +
+                "'    | |              | || |              | || |              | | | |              | | | |              | || |              | || |              | || |              | || |              | || |              | || |              | |\n" +
+                "'    | '--------------' || '--------------' || '--------------' | | '--------------' | | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |\n" +
+                "'     '----------------'  '----------------'  '----------------'   '----------------'   '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' ");
         System.out.println(man);
 
         Scanner scan = new Scanner(System.in);
@@ -20,12 +25,15 @@ public class MethodExercise {
         String attackerPer = scan.nextLine();
         System.out.println("Who is target? ");
         String targetPer = scan.nextLine();
-        attack(attackerPer, targetPer);
+        System.out.println("Reason of attack: ");
+        String reasonPer = scan.nextLine();
+        attack(attackerPer, targetPer, reasonPer);
+
 
 
     }
     public static void printWelcome(){
-        System.out.println("Welcome to Code Quest!");
+        System.out.println("Welcome my sweatheart to my Code Quest!");
     }
     public static void displayPlayerName(String playerName){
         System.out.printf("Player joined: %s \n",playerName);
@@ -40,9 +48,9 @@ public class MethodExercise {
         System.out.println("Level: "+ level);
     }
 
-    public static void attack(String attacker, String target){
+    public static void attack(String attacker, String target, String reasonOfAttack){
 
-        System.out.printf("%s attacks %s", attacker, target);
+        System.out.printf("%s attacks %s by %s", attacker, target, reasonOfAttack);
     }
     //. public static String getPlayerTitle(String name)
     //Return a string like:

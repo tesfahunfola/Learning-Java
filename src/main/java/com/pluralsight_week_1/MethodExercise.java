@@ -7,6 +7,14 @@ public class MethodExercise {
         printWelcome();
         displayPlayerName("Chelsea");
         showLevel(11);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Who is attacker? ");
+        String attackerPer = scan.nextLine();
+        System.out.println("Who is target? ");
+        String targetPer = scan.nextLine();
+        System.out.println("Reason of attack: ");
+        String reasonPer = scan.nextLine();
+        attack(attackerPer, targetPer, reasonPer);
         String man = getPlayerTitle("'     .----------------.  .----------------.  .----------------.   .----------------.   .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------. \n" +
                 "'    | .--------------. || .--------------. || .--------------. | | .--------------. | | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |\n" +
                 "'    | |   _____      | || | _____  _____ | || | ____   ____  | | | | _____  _____ | | | |     ______   | || |  ____  ____  | || |  _________   | || |   _____      | || |    _______   | || |  _________   | || |      __      | |\n" +
@@ -20,14 +28,7 @@ public class MethodExercise {
                 "'     '----------------'  '----------------'  '----------------'   '----------------'   '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' ");
         System.out.println(man);
 
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Who is attacker? ");
-        String attackerPer = scan.nextLine();
-        System.out.println("Who is target? ");
-        String targetPer = scan.nextLine();
-        System.out.println("Reason of attack: ");
-        String reasonPer = scan.nextLine();
-        attack(attackerPer, targetPer, reasonPer);
+
 
 
 

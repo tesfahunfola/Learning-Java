@@ -12,10 +12,10 @@ public class MethodExeriseII {
 
         if (num ==1){
             System.out.println("1. Add");
-            doAdd(scanner);
+            doAdd();
         }else if(num == 2 ){
             System.out.println("Your choice is 2: subtract");
-            doSubtract(scanner);
+            doSubtract();
         }else{
             System.out.println("Invalid input: "+num);
         }
@@ -24,27 +24,27 @@ public class MethodExeriseII {
 
     }
 
-    public static void doAdd(Scanner scanner) {
-
-        System.out.print("Enter 1st number: ");
+    public static void doAdd() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the first num: ");
         double num1 = scanner.nextDouble();
 
-        System.out.print("Enter 2nd number: ");
+        System.out.println("Enter the second num: ");
         double num2 = scanner.nextDouble();
 
-        double sum = num1 + num2;
-        System.out.printf("%f + %f = %f", num1, num2, sum);
+        double sum= num1 + num2;
+        System.out.println(sum);
+
     }
-    public static void doSubtract(Scanner scanner) {
-
-        System.out.print("Enter 1st number: ");
+    public static void doSubtract(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the first num: ");
         double num1 = scanner.nextDouble();
 
-        System.out.print("Enter 2nd number: ");
+        System.out.println("Enter the second num: ");
         double num2 = scanner.nextDouble();
-
-        double difference = num1 - num2;
-        System.out.printf("%f - %f = %f", num1, num2, difference);
+        double subtract = num1 - num2;
+        System.out.printf("Subtract %f - %f is %f",num1, num2, subtract);
     }
 
 }

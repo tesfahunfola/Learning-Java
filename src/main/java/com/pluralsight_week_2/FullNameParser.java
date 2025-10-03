@@ -9,7 +9,8 @@ public class FullNameParser {
         System.out.print("Enter your full name: ");
         String fullNameParser2 = scanner.nextLine();
         fullNameParser2(fullNameParser2);
-    } public static void fullNameParser2(String name) {
+    }
+    public static void fullNameParser2(String name) {
         name = name.trim();
 
         // variables for name parts

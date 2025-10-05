@@ -8,6 +8,7 @@ public class TestStatistics {
     public static void main(String[] args) {
         int [] students = {98, 55, 67, 98, 66, 77, 12, 44, 89, 45};
 
+
         int sum = 0;
 
         for (int score : students){

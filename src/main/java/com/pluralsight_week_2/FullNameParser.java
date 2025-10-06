@@ -7,8 +7,8 @@ public class FullNameParser {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your full name: ");
-        String fullNameParser2 = scanner.nextLine();
-        fullNameParser2(fullNameParser2);
+        String fullNameParser = scanner.nextLine();
+        fullNameParser2(fullNameParser);
     }
     public static void fullNameParser2(String name) {
         name = name.trim();

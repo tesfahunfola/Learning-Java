@@ -20,6 +20,7 @@ public class CellPhoneApplication {
         cellPhone1.setOwner(scanner.nextLine());
 
 
+
         CellPhone cellPhone2 = new CellPhone();
 
         System.out.println("What is the serial number?");

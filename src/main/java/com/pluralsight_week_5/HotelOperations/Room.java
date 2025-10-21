@@ -1,6 +1,4 @@
-package com.pluralsight_week_5;
-
-import java.util.Scanner;
+package com.pluralsight_week_5.HotelOperations;
 
 public class Room {
     private int numberOfBeds;
@@ -55,5 +53,16 @@ public class Room {
         {
             return false;
         }
+    }
+
+    public void checkIn(){
+        isOcuupied =true;
+        isDirty = true;
+    }
+    public void checkOut(){
+        isOcuupied = false;
+    }
+    public void cleanRoom(){
+        isDirty = false;
     }
 }

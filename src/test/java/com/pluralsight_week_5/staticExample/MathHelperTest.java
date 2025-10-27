@@ -13,7 +13,7 @@ class MathHelperTest {
         //act
         int expect = 8;
         //assert
-        assertEquals(8, total);
+        assertEquals(expect, total);
     }
 
     @Test

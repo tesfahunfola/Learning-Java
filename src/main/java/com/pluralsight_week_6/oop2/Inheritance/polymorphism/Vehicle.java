@@ -1,54 +1,64 @@
 package com.pluralsight_week_6.oop2.Inheritance.polymorphism;
 
-public class Vehicle extends Asset {
-   private String address;
-   private int condition;
-   private  int squareFoot;
-   private int lotSize;
+import java.time.LocalDate;
 
-    public Vehicle(String description, String date, double originalCost, String address, int condition, int squareFoot, int lotSize) {
+public class Vehicle extends Asset{
+    private String makeModel;
+    private int year;
+    private int odometer;
+
+    public Vehicle(String description, String date, double originalCost, String makeModel, int year, int odometer) {
         super(description, date, originalCost);
-        this.address = address;
-        this.condition = condition;
-        this.squareFoot = squareFoot;
-        this.lotSize = lotSize;
+        this.makeModel = makeModel;
+        this.year = year;
+        this.odometer = odometer;
     }
 
-    public String getAddress() {
-        return address;
+    public String getMakeModel() {
+        return makeModel;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setMakeModel(String makeModel) {
+        this.makeModel = makeModel;
     }
 
-    public int getCondition() {
-        return condition;
+    public int getYear() {
+        return year;
     }
 
-    public void setCondition(int condition) {
-        this.condition = condition;
+    public void setYear(int year) {
+        this.year = year;
     }
 
-    public int getSquareFoot() {
-        return squareFoot;
+    public int getOdometer() {
+        return odometer;
     }
 
-    public void setSquareFoot(int squareFoot) {
-        this.squareFoot = squareFoot;
+    public void setOdometer(int odometer) {
+        this.odometer = odometer;
     }
-
-    public int getLotSize() {
-        return lotSize;
-    }
-
-    public void setLotSize(int lotSize) {
-        this.lotSize = lotSize;
-    }
-
 
     @Override
-    public double getValue() {
-        return super.getValue();
+    public double getValue(){
+        int currentYear = LocalDate.now().getYear();
+        int ageCar = currentYear - year;
+        double valueCar = getOriginalCost();
+        if (ageCar <= 3){
+            valueCar = valueCar - getOriginalCost() * 0.03 * ageCar;
+        } else if (ageCar <= 6) {
+            valueCar = valueCar - getOriginalCost() * 0.06 * ageCar;
+        } else if (year <= 10) {
+            valueCar = valueCar - getOriginalCost() * 0.08 * ageCar;
+            
+        } else if (ageCar > 10) {
+            valueCar = 100_000;
+
+        }
+        if (odometer > 100_000 && !(makeModel.toLowerCase().contains("honda") && !(makeModel.toLowerCase().contains("toyota")))){
+
+            valueCar *= 0.75;
+        }
+
+        return valueCar;
     }
 }

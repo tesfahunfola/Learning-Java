@@ -1,4 +1,4 @@
-package com.pluralsight_week_6.oop2.Inheritance.polymorphism;
+package com.pluralsight_week_6.oop2.polymorphism;
 
 public class Asset {
 
